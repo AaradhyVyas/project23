@@ -82,7 +82,7 @@ function draw() {
 		helicopterSprite.velocityX = helicopterSprite.velocityX+2
 		}
 
-		Matter.Body.translate(packageBody,{x:-0.02, y:0})
+		Matter.Body.translate(packageBody,{x:-20, y:0})
 
   drawSprites();
   
