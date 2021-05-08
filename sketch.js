@@ -36,7 +36,6 @@ function setup() {
 	World.add(world, packageBody);
 	
 
-	//Create a Ground
 	ground = Bodies.rectangle(width/2, 650, width, 10 , {isStatic:true} );
  	World.add(world, ground);
 
@@ -74,16 +73,6 @@ function draw() {
   packageSprite.x= packageBody.position.x 
   packageSprite.y= packageBody.position.y 
 
-  if (keyDown(LEFT_ARROW)){
-	helicopterSprite.velocityX = helicopterSprite.velocityX-2
-	}
-
-	if (keyDown(RIGHT_ARROW)){
-		helicopterSprite.velocityX = helicopterSprite.velocityX+2
-		}
-
-		Matter.Body.translate(packageBody,{x:-20, y:0})
-
   drawSprites();
   
 }
@@ -93,17 +82,11 @@ function keyPressed(){
 	if(keyCode === DOWN_ARROW){    
 	Matter.Body.setStatic(packageBody,false);
    }
+   if (keyCode === LEFT_ARROW){
+	helicopterSprite.velocityX = helicopterSprite.velocityX-4
+	}
 
+	if (keyCode === RIGHT_ARROW){
+		helicopterSprite.velocityX = helicopterSprite.velocityX+4
+		}
 }
-
-
-
-
-
-
-
-
-
-
-
-
