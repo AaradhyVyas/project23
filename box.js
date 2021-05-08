@@ -8,6 +8,8 @@ class Box {
       this.body = Bodies.rectangle(x, y, width, height, options);
       this.width = width;
       this.height = height;
+        
+        Matter.Body.translate(packageBody, {x:-20,y:0});
       
       World.add(world, this.body);
     }
